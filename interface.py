@@ -1,6 +1,8 @@
 import gradio as gr
 from transformers import pipeline
 from datasets import load_dataset
+import random
+
 # Carregando distilBERT
 print("Carregando o modelo de análise de sentimentos...")
 classifier = pipeline(
@@ -15,8 +17,11 @@ try:
     dataset = load_dataset("amazon_polarity")
     print("Dataset carregado com sucesso!")
 
-    print("\n--- Testando o modelo com um exemplo do dataset ---")
-    exemplo_teste = dataset['test'][0]
+    print("\n--- Testando o modelo com um exemplo aleatório do dataset ---")
+    tamanho_dataset = len(dataset['test'])
+    indice_aleatorio = random.randint(0, tamanho_dataset - 1)
+    exemplo_teste = dataset['test'][indice_aleatorio]
+    
     texto_exemplo = exemplo_teste['content']
     sentimento_real = 'POSITIVO' if exemplo_teste['label'] == 1 else 'NEGATIVO'
 
