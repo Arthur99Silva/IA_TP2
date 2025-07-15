@@ -1,0 +1,11 @@
+Bibliotecas necessárias: Gradio e transformers.
+O algoritmo principal é o interface.py, ao executar ele será feito um teste de exemplo e em seguida
+irá iniciar a interface, para acessa-la basta apenas clicar na url que aparecer no terminal(http://127.0.0.1:7860)
+
+The product has some interesting features, but the user manual is incredibly confusing.
+
+I’ve seen better, but I’ve also seen worse. It’s just okay.
+
+Well, that was certainly an experience
+
+The raw power of this machine is undeniable, though it lacks finesse
